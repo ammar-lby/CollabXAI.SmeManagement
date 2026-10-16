@@ -2,7 +2,7 @@ namespace CollabXAI.Domain.Entities;
 
 public class Sme
 {
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } //globablly unique identifier, random 128-bit , 
 
     public string OrganisationName { get; set; } = string.Empty;
 
