@@ -1,3 +1,4 @@
+using CollabXAI.Api.Middleware;
 using CollabXAI.Application.Interfaces;
 using CollabXAI.Application.Services;
 using CollabXAI.Infrastructure;
@@ -22,6 +23,7 @@ using (var scope = app.Services.CreateScope())
     db.Database.EnsureCreated();
 }
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseSwagger();
 app.UseSwaggerUI();
