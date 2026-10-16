@@ -7,7 +7,7 @@ namespace CollabXAI.Application.Dtos;
 public class CreateSmeRequest
 {
     [Required]
-    [StringLength(200, MinimumLength = 2)]
+    [StringLength(100, MinimumLength = 2)]
     public string OrganisationName { get; set; } = string.Empty;
 
     [Required]

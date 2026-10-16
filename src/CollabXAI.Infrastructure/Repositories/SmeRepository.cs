@@ -19,7 +19,7 @@ public class SmeRepository : ISmeRepository
 
     public async Task<List<Sme>> GetAllAsync()
     {
-        // AsNoTracking: we only read these, so ef doesnt need to watch them for changes.
+        // AsNoTracking: we only read these, so entity framework doesnt need to watch them for changes.
         // that makes the query a bit faster and use less memory
         return await _context.Smes
             .AsNoTracking()

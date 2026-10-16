@@ -16,9 +16,13 @@ builder.Services.AddScoped<ISmeService, SmeService>();
 
 var app = builder.Build();
 
-// create the database and tables on startup if they dont exist yet
+// runs once on startup: creates the sqlite file and the Smes table if they dont exist,
+// so nobody has to set up a database by hand
+// improvement: EnsureCreated wont update an existing table, so a real project should use ef migrations
 using (var scope = app.Services.CreateScope())
 {
+    // the dbcontext is scoped (one per request) and there is no request at startup,
+    // so we create a scope ourselves to get one
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.EnsureCreated();
 }

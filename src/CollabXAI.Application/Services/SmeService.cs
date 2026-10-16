@@ -43,7 +43,7 @@ public class SmeService : ISmeService
         // business rule: two smes can't share an email
         if (await _repository.EmailExistsAsync(email))
         {
-            throw new DuplicateEmailException(email);
+            throw new DuplicateEmailException(email); //comment this out to simulate a test failing to make sure automated tests work
         }
 
         // the server creates the id and timestamp, the client doesnt get to choose them
