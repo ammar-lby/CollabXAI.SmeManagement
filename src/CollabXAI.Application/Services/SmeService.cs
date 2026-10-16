@@ -87,7 +87,8 @@ public class SmeService : ISmeService
         await _repository.DeleteAsync(sme);
     }
 
-    // maps the entity to what we return to the client. private because only this class needs it
+    // maps the Sme entity to a SmeResponse so the database model is never exposed to the client,
+    // that way the entity and the api response can change separately
     private static SmeResponse ToResponse(Sme sme)
     {
         return new SmeResponse

@@ -2,6 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CollabXAI.Application.Dtos;
 
+// what the client sends when updating an sme. same validation rules as registering,
+// the id comes from the url so it isnt in here
 public class UpdateSmeRequest
 {
     [Required]

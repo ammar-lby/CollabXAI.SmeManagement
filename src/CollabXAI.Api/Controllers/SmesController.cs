@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CollabXAI.Api.Controllers;
 
+// the front door of the api. it only deals with http: it receives the request, calls the service
+// and returns the right status code (200, 201, 204). no business rules in here
 [ApiController]
 [Route("api/smes")]
 public class SmesController : ControllerBase

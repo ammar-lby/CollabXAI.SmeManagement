@@ -5,7 +5,7 @@ namespace CollabXAI.Tests;
 
 // a fake repository that keeps smes in a list instead of a database,
 // so the service tests are fast and need no setup
-public class FakeSmeRepository : ISmeRepository //inhertis from ISmeRepository
+public class FakeSmeRepository : ISmeRepository 
 {
     public List<Sme> Smes { get; } = new();
 

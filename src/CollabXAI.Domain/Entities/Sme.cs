@@ -1,5 +1,6 @@
 namespace CollabXAI.Domain.Entities;
 
+// the core entity: one sme registered on the platform. entity framework maps it to a row in the Smes table
 public class Sme
 {
     public Guid Id { get; set; } //globablly unique identifier, random 128-bit , 

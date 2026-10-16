@@ -4,6 +4,7 @@ using CollabXAI.Domain.Exceptions;
 
 namespace CollabXAI.Tests;
 
+// unit tests for the business rules in SmeService. they use the fake repository so there is no database
 public class SmeServiceTests
 {
     private readonly FakeSmeRepository _repository = new();

@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CollabXAI.Infrastructure.Data;
 
+// entity framework's link to the database. each DbSet is a table and OnModelCreating sets the
+// column rules. the repository uses this to read and write
 public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
